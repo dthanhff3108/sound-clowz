@@ -1,0 +1,112 @@
+@import '../../styles//variables.scss';
+.song-card {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  height: 52px;
+  width: 100%;
+  max-width: 320px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  &:hover {
+    .song-img > .song-player {
+      display: block;
+    }
+    .song-more {
+      display: flex;
+    }
+  }
+  .song-img {
+    position: relative;
+    img {
+      width: 52px;
+      height: 52px;
+      border: 1px solid $text-light;
+      margin-right: 1rem;
+    }
+    .song-player {
+      position: absolute;
+      display: none;
+      top: 24%;
+      left: 18%;
+    }
+  }
+  .song-about {
+    font-size: 14px;
+    text-align: left;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .artist {
+      color: $text-light;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      white-space: nowrap;
+      height: 14px;
+      line-height: 14px;
+    }
+    .name {
+      color: $text;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      height: 14px;
+      line-height: 14px;
+    }
+    .options {
+      display: flex;
+      align-items: center;
+      color: $text-light;
+      cursor: pointer;
+      margin-left: -0.2rem;
+      .option-item {
+        display: flex;
+        align-items: center;
+        margin-right: 0.5rem;
+        &:hover {
+          color: $text;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+      svg {
+        fill: currentColor;
+      }
+    }
+  }
+  .song-more {
+    position: absolute;
+    display: none;
+    top: 30%;
+    right: 0;
+    align-items: center;
+    background: white;
+    padding-left: 0.5rem;
+    box-shadow: -2px -2px 4px $white;
+    .more-icon {
+      width: 20px;
+      height: 20px;
+      border: 1px solid $text-light-2;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0.25rem;
+      &:hover {
+        border: 1px solid $text-light;
+      }
+    }
+  }
+  .song-player {
+    position: absolute;
+    left: 0;
+    top: 47.5%;
+  }
+}

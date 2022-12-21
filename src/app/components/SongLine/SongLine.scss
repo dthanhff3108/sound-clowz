@@ -1,0 +1,76 @@
+@import '../../styles//variables.scss';
+.song-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 35px;
+  padding: 8px 4px;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &:hover {
+    background: hsla(0, 0%, 100%, 0.1);
+    outline: 0;
+    border-bottom: 1px solid transparent;
+    .view {
+      display: none;
+    }
+    .control {
+      display: flex;
+    }
+  }
+}
+.song-line-info {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  p {
+    &:first-child {
+      color: $text-light-2;
+      white-space: nowrap;
+      margin-right: 0.5rem;
+    }
+    &:last-child {
+      color: $white;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      height: 12px;
+      line-height: 12px;
+    }
+  }
+}
+.song-line-control {
+  font-size: 10px;
+  color: $white;
+  margin-left: 2rem;
+  .view {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  svg {
+    fill: currentColor;
+  }
+  .control {
+    display: none;
+    align-items: center;
+    .control-item {
+      padding: 2px;
+      text-align: center;
+      width: 22px;
+      height: 18px;
+      border-radius: 2px;
+      border: 1px solid $white;
+      margin-right: 0.25rem;
+      i {
+        font-size: 8px;
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .icon-component {
   display: flex;
   align-items: center;
@@ -13,5 +15,20 @@
     svg {
       @include size($i + px);
     }
+  }
+  .size#{$i}.play-special {
+    width: calc($i * 1.7) + px;
+    height: calc($i * 1.7) + px;
+    background-color: $primary-color;
+    border-radius: 50%;
+  }
+}
+
+.play-special {
+  background-color: $primary-color;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary-color-dark;
   }
 }

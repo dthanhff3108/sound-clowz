@@ -1,5 +1,5 @@
 import LayoutMain from 'app/components/Layout/LayoutMain';
-import DiscoverPage from 'app/pages/DiscoverPage';
+import DiscoverPage from 'app/pages/DiscoverPage/DiscoverPage';
 import LoginPage from 'app/pages/LoginPage';
 import Private from 'app/pages/Pravite';
 import RegisterPage from 'app/pages/RegisterPage';

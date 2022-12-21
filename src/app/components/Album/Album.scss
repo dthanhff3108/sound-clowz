@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+.chart {
+  height: fit-content;
+  font-size: 14px;
+  margin-right: 1.25rem;
+  .chart-thumb {
+    position: relative;
+    min-width: 116px;
+    width: 100%;
+    height: 100%;
+    &:hover {
+      .chart-control {
+        opacity: 1;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .chart-control {
+      position: absolute;
+      opacity: 0;
+      display: flex;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s linear;
+      .chart-control-bottom {
+        position: absolute;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0 4px;
+        bottom: 6px;
+        right: 6px;
+        fill: $white;
+      }
+    }
+  }
+  .chart-name {
+    color: $text-dark;
+    margin: 0.25rem 0;
+  }
+  .chart-desc {
+    color: $text-light;
+  }
+}
